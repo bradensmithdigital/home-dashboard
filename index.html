@@ -58,8 +58,10 @@ body{margin:0;min-height:100vh;background:radial-gradient(120% 70% at 50% 0%,#1a
 .r-master{--c1:#2b2a6b;--c2:#4a3f9e;--glow:#b6a6ff}
 .r-grayson{--c1:#0f3e4a;--c2:#1d6a78;--glow:#7fd8e6}
 .r-dining{--c1:#5a2a1c;--c2:#93492a;--glow:#ffa77a}
+.r-living{--c1:#5a1f3e;--c2:#8e3564;--glow:#f2b8d0}
+.r-outside{--c1:#173d2c;--c2:#2a6a48;--glow:#7fd08a}
 .r-garage{--c1:#262a3a;--c2:#40465e;--glow:#a9b0cc}
-.r-office{--c1:#1d3b26;--c2:#2f6440;--glow:#8fdca6}
+.r-office{--c1:#5a3d0c;--c2:#9a6a14;--glow:#ffd36b}
 .r-whole{--c1:#152559;--c2:#24418f;--glow:#f6c96b}
 
 /* room page */
@@ -94,6 +96,9 @@ section{background:var(--card);border:1px solid var(--line);border-radius:28px;p
 .btn.ok{box-shadow:0 0 0 3px var(--ok) inset}
 .btn.ok .state{color:var(--ok)} .btn.err .state{color:var(--err)}
 .on {--c1:#7a4f12;--c2:#c08a2a;--glow:#f6c96b}
+.hol{--c1:#6e1a22;--c2:#1f6a3a;--glow:#ff6b6b}
+.movie{--c1:#2a1752;--c2:#4b2a8a;--glow:#b18cff}
+.tvon{--c1:#1a3270;--c2:#2d55b0;--glow:#9fb4ff}
 .dim{--c1:#4a2f1a;--c2:#7a4c24;--glow:#ffa94d}
 .off{--c1:#1a1f3d;--c2:#2e3560;--glow:#8a93c4}
 .fan1{--c1:#103a3f;--c2:#1c5a5f;--glow:#5fd0c8}
@@ -176,14 +181,18 @@ section{background:var(--card);border:1px solid var(--line);border-radius:28px;p
     lamp: '<svg viewBox="0 0 32 32"><path d="M9 5h14l4 11H5z" fill="#ffd08a"/><rect x="15" y="16" width="2" height="9" fill="#c9cff0"/><rect x="10" y="25" width="12" height="3" rx="1.5" fill="#c9cff0"/></svg>',
     fan:  '<svg viewBox="0 0 32 32"><g fill="#5fd0c8"><path d="M16 16C14 9 15 4 19 4s3 7-3 12z"/><path d="M16 16c7-2 12-1 12 3s-7 3-12-3z"/><path d="M16 16c2 7 1 12-3 12s-3-7 3-12z"/><path d="M16 16C9 18 4 17 4 13s7-3 12 3z"/></g><circle cx="16" cy="16" r="2.5" fill="#eef0ff"/></svg>',
     night:'<svg viewBox="0 0 32 32"><ellipse cx="16" cy="14" rx="8" ry="9" fill="#ffd08a"/><rect x="11" y="22" width="10" height="3" rx="1" fill="#c98a4a"/><rect x="10" y="25" width="12" height="3" rx="1.5" fill="#8a5a30"/></svg>',
+    holiday:'<svg viewBox="0 0 32 32"><path d="M3 8q13 9 26 0" fill="none" stroke="#c9cff0" stroke-width="1.5"/><g><rect x="6.5" y="11" width="2" height="2" fill="#c9cff0"/><ellipse cx="7.5" cy="16" rx="2.6" ry="3.4" fill="#ff6b6b"/><rect x="12.5" y="13.5" width="2" height="2" fill="#c9cff0"/><ellipse cx="13.5" cy="18.5" rx="2.6" ry="3.4" fill="#7ee07e"/><rect x="18" y="13.5" width="2" height="2" fill="#c9cff0"/><ellipse cx="19" cy="18.5" rx="2.6" ry="3.4" fill="#f6c96b"/><rect x="23.5" y="11" width="2" height="2" fill="#c9cff0"/><ellipse cx="24.5" cy="16" rx="2.6" ry="3.4" fill="#6bb8ff"/></g></svg>',
+    tv:   '<svg viewBox="0 0 32 32"><rect x="3" y="6" width="26" height="17" rx="2" fill="#9fb4ff"/><rect x="5" y="8" width="22" height="13" rx="1" fill="#1c2a5e"/><rect x="11" y="25" width="10" height="2.5" rx="1.2" fill="#c9cff0"/></svg>',
     moon: '<svg viewBox="0 0 100 100"><path d="M62 14a36 36 0 1 0 24 58A32 32 0 0 1 62 14z" fill="#d9ceff"/><g fill="#fff"><circle cx="76" cy="26" r="3"/><circle cx="86" cy="42" r="2"/></g></svg>',
     star: '<svg viewBox="0 0 100 100"><path d="M50 10l9 22 23 2-18 15 6 23-20-13-20 13 6-23-18-15 23-2z" fill="#f6c96b"/></svg>',
     // rooms
     bed:   '<svg viewBox="0 0 64 64"><rect x="6" y="20" width="6" height="34" rx="2" fill="#d9ceff"/><rect x="52" y="30" width="6" height="24" rx="2" fill="#d9ceff"/><rect x="12" y="34" width="40" height="12" rx="3" fill="#b6a6ff"/><rect x="14" y="26" width="14" height="9" rx="4" fill="#fff"/></svg>',
     crib:  '<svg viewBox="0 0 64 64"><rect x="8" y="22" width="48" height="4" rx="2" fill="#c8f1f7"/><rect x="8" y="46" width="48" height="4" rx="2" fill="#c8f1f7"/><g fill="#7fd8e6"><rect x="8" y="22" width="4" height="34" rx="2"/><rect x="52" y="22" width="4" height="34" rx="2"/><rect x="19" y="26" width="3" height="20"/><rect x="27" y="26" width="3" height="20"/><rect x="35" y="26" width="3" height="20"/><rect x="43" y="26" width="3" height="20"/></g><path d="M44 6l2 5 5 .5-4 3.5 1.2 5-4.2-2.7-4.2 2.7L41 15l-4-3.5 5-.5z" fill="#f6c96b"/></svg>',
     table: '<svg viewBox="0 0 64 64"><path d="M32 6v8" stroke="#ffd6b8" stroke-width="2"/><path d="M22 14h20l-4 8H26z" fill="#ffa77a"/><rect x="8" y="34" width="48" height="6" rx="2" fill="#ffd6b8"/><rect x="13" y="40" width="4" height="16" fill="#ffd6b8"/><rect x="47" y="40" width="4" height="16" fill="#ffd6b8"/></svg>',
+    sofa:  '<svg viewBox="0 0 64 64"><rect x="12" y="18" width="40" height="18" rx="5" fill="#f2b8d0"/><rect x="6" y="28" width="12" height="18" rx="5" fill="#e48ab0"/><rect x="46" y="28" width="12" height="18" rx="5" fill="#e48ab0"/><rect x="16" y="32" width="32" height="12" rx="3" fill="#f7d3e2"/><rect x="10" y="46" width="4" height="8" rx="1" fill="#c96a94"/><rect x="50" y="46" width="4" height="8" rx="1" fill="#c96a94"/></svg>',
+    tree:  '<svg viewBox="0 0 64 64"><circle cx="50" cy="14" r="7" fill="#f6c96b"/><path d="M28 6L12 34h10L10 50h36L34 34h10z" fill="#7fd08a"/><rect x="25" y="50" width="6" height="8" rx="1" fill="#a9785a"/><rect x="4" y="57" width="56" height="3" rx="1.5" fill="#4f8f5a"/></svg>',
     garage:'<svg viewBox="0 0 64 64"><path d="M6 26L32 8l26 18v30H6z" fill="#a9b0cc"/><rect x="14" y="30" width="36" height="26" fill="#40465e"/><g fill="#a9b0cc"><rect x="14" y="36" width="36" height="2"/><rect x="14" y="42" width="36" height="2"/><rect x="14" y="48" width="36" height="2"/></g></svg>',
-    desk:  '<svg viewBox="0 0 64 64"><rect x="16" y="10" width="32" height="22" rx="3" fill="#8fdca6"/><rect x="19" y="13" width="26" height="16" rx="1" fill="#1d3b26"/><rect x="29" y="32" width="6" height="6" fill="#cfeeda"/><rect x="6" y="38" width="52" height="5" rx="2" fill="#cfeeda"/><rect x="10" y="43" width="4" height="14" fill="#cfeeda"/><rect x="50" y="43" width="4" height="14" fill="#cfeeda"/></svg>',
+    desk:  '<svg viewBox="0 0 64 64"><rect x="16" y="10" width="32" height="22" rx="3" fill="#ffd36b"/><rect x="19" y="13" width="26" height="16" rx="1" fill="#3a2706"/><rect x="29" y="32" width="6" height="6" fill="#fff0c9"/><rect x="6" y="38" width="52" height="5" rx="2" fill="#fff0c9"/><rect x="10" y="43" width="4" height="14" fill="#fff0c9"/><rect x="50" y="43" width="4" height="14" fill="#fff0c9"/></svg>',
     house: '<svg viewBox="0 0 64 64"><path d="M6 30L32 8l26 22" fill="none" stroke="#f6c96b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 28v28h36V28L32 13z" fill="#f6c96b"/><rect x="27" y="40" width="10" height="16" rx="2" fill="#24418f"/></svg>',
     back:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>'
   };
@@ -191,6 +200,22 @@ section{background:var(--card);border:1px solid var(--line);border-radius:28px;p
   /* ROOMS — add buttons to a room by giving it "rows" (fixture rows) or "big" (large routine buttons).
      Each button's key is what its Voice Monkey device ID is saved under. */
   const ROOMS = [
+    { id:"whole-home",      title:"Whole Home",      icon:"house",  cls:"r-whole", big:[
+      {key:"bedtime", label:"BEDTIME", cls:"bedtime", icon:"moon"},
+      {key:"goodnight", label:"GOODNIGHT", cls:"goodnight", icon:"star"}]},
+    { id:"living-room",     title:"Living Room",     icon:"sofa",   cls:"r-living", rows:[
+      { name:"All lights", icon:"bulb", btns:[
+        {key:"lrAllOn", label:"ON", cls:"on"}, {key:"lrAllDim", label:"DIM", cls:"dim"},
+        {key:"lrAllMovie", label:"MOVIE", cls:"movie"}, {key:"lrAllOff", label:"OFF", cls:"off"}]},
+      { name:"TV", icon:"tv", btns:[
+        {key:"lrTvOn", label:"ON", cls:"tvon"}, {key:"lrTvOff", label:"OFF", cls:"off"}]}
+    ]},
+    { id:"dining-room",     title:"Dining Room",     icon:"table",  cls:"r-dining", rows:[
+      { name:"All lights", icon:"bulb", btns:[
+        {key:"drAllOn", label:"ON", cls:"on"}, {key:"drAllDim", label:"DIM", cls:"dim"}, {key:"drAllOff", label:"OFF", cls:"off"}]},
+      { name:"Holiday", icon:"holiday", btns:[
+        {key:"drHolidayOn", label:"ON", cls:"hol"}, {key:"drHolidayOff", label:"OFF", cls:"off"}]}
+    ]},
     { id:"master-bedroom", title:"Master Bedroom", icon:"bed", cls:"r-master", rows:[
       { name:"All lights", icon:"bulb", btns:[
         {key:"mbAllOn", label:"ON", cls:"on"}, {key:"mbAllDim", label:"DIM", cls:"dim"}, {key:"mbAllOff", label:"OFF", cls:"off"}]},
@@ -202,13 +227,26 @@ section{background:var(--card);border:1px solid var(--line);border-radius:28px;p
       { name:"Night light", icon:"night", btns:[
         {key:"nightlightOn", label:"ON", cls:"on"}, {key:"nightlightOff", label:"OFF", cls:"off"}]}
     ]},
-    { id:"graysons-room",   title:"Grayson's Room",  icon:"crib",   cls:"r-grayson" },
-    { id:"dining-room",     title:"Dining Room",     icon:"table",  cls:"r-dining" },
-    { id:"garage",          title:"Garage",          icon:"garage", cls:"r-garage" },
-    { id:"upstairs-office", title:"Upstairs Office", icon:"desk",   cls:"r-office" },
-    { id:"whole-home",      title:"Whole Home",      icon:"house",  cls:"r-whole", big:[
-      {key:"bedtime", label:"BEDTIME", cls:"bedtime", icon:"moon"},
-      {key:"goodnight", label:"GOODNIGHT", cls:"goodnight", icon:"star"}]}
+    { id:"graysons-room",   title:"Grayson's Room",  icon:"crib",   cls:"r-grayson", rows:[
+      { name:"All lights", icon:"bulb", btns:[
+        {key:"grAllOn", label:"ON", cls:"on"}, {key:"grAllDim", label:"DIM", cls:"dim"}, {key:"grAllOff", label:"OFF", cls:"off"}]},
+      { name:"Fan", icon:"fan", btns:[
+        {key:"grFanLow", label:"LOW", cls:"fan1"}, {key:"grFanMed", label:"MEDIUM", cls:"fan2"},
+        {key:"grFanHigh", label:"HIGH", cls:"fan3"}, {key:"grFanOff", label:"OFF", cls:"off"}]},
+      { name:"Night light", icon:"night", btns:[
+        {key:"grNightOn", label:"ON", cls:"on"}, {key:"grNightOff", label:"OFF", cls:"off"}]}
+    ]},
+    { id:"garage",          title:"Garage",          icon:"garage", cls:"r-garage", rows:[
+      { name:"All lights", icon:"bulb", btns:[
+        {key:"gaAllOn", label:"ON", cls:"on"}, {key:"gaAllOff", label:"OFF", cls:"off"}]}
+    ]},
+    { id:"upstairs-office", title:"Upstairs Office", icon:"desk",   cls:"r-office", rows:[
+      { name:"All lights", icon:"bulb", btns:[
+        {key:"ofAllOn", label:"ON", cls:"on"}, {key:"ofAllOff", label:"OFF", cls:"off"}]},
+      { name:"Desk lights", icon:"lamp", btns:[
+        {key:"ofDeskOn", label:"ON", cls:"on"}, {key:"ofDeskOff", label:"OFF", cls:"off"}]}
+    ]},
+    { id:"outside",         title:"Outside",         icon:"tree",   cls:"r-outside" }
   ];
 
   // key -> spoken-style full name, e.g. "Master Bedroom Fan HIGH"
